@@ -1,0 +1,537 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>圆方树学习笔记 | LC_535</title>
+<link rel="shortcut icon" href="https://lc535.github.io/favicon.ico?v=1692930825983">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://lc535.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="圆方树学习笔记 | LC_535 - Atom Feed" href="https://lc535.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="圆方树是最初是用于解决仙人掌图中的问题的，但有些情况也可用于一般无向图中。
+P1 点双连通分量
+定义一个图为点双连通图为：对于图上任意两个节点，至少存在两条的简单路径，并且满足两条简单路径边集的交集为空。
+特殊地，对于只有两个点的图，且这两..." />
+    <meta name="keywords" content="学习笔记" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://lc535.github.io">
+  <img class="avatar" src="https://lc535.github.io/images/avatar.png?v=1692930825983" alt="">
+  </a>
+  <h1 class="site-title">
+    LC_535
+  </h1>
+  <p class="site-description">
+    一直被超越，从未被模仿
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://lc535.github.io" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://lc535.github.io/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="https://lc535.github.io/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              圆方树学习笔记
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-08-25
+              </span>
+              <span>
+                13 min read
+              </span>
+              
+                <a href="https://lc535.github.io/tag/zRZHdoYRd/" class="post-tag">
+                  # 学习笔记
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>圆方树是最初是用于解决仙人掌图中的问题的，但有些情况也可用于一般无向图中。</p>
+<h2 id="p1-点双连通分量">P1 点双连通分量</h2>
+<p>定义一个图为点双连通图为：对于图上任意两个节点，至少存在两条的简单路径，并且满足两条简单路径边集的交集为空。</p>
+<p>特殊地，对于只有两个点的图，且这两个点有一条连边。这种情况的图也为点双连通图。</p>
+<p>一个图的<strong>点双连通分量</strong>为图的<strong>极大点双连通子图</strong>。</p>
+<p>以下我们称<strong>点双</strong>为点双连通分量。</p>
+<p>注意：一个点可以属于多个点双（割点），而一条边至多属于一个点双。</p>
+<p>求点双可以用 tarjan 算法在线性时空复杂度求出。</p>
+<p>这里重申一下 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mtext>dfn</mtext><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">\text{dfn}_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">dfn</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mtext>low</mtext><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">\text{low}_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">low</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的定义：</p>
+<ul>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mtext>dfn</mtext><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">\text{dfn}_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">dfn</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：第一次便利到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 点时 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 是第几个被访问到的节点。</p>
+</li>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mtext>low</mtext><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">\text{low}_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">low</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>：点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 经过至多一次返祖边能到达的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>dfn</mtext></mrow><annotation encoding="application/x-tex">\text{dfn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">dfn</span></span></span></span></span> 值最小的节点。</p>
+</li>
+</ul>
+<p>注：这里 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mtext>low</mtext><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">\text{low}_u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">low</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的定义与平常的 tarjan 算法略有出入。</p>
+<p>具体地，我们可以用 tarjan 求出割点，判断 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 为割点条件为 <code>low[v]&gt;=dfn[u]</code>，可以简单理解为点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> 到达 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 之前的点必须要经过点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>。</p>
+<p>类似普通的 tarjan 我们维护一个栈，每次新遍历到一个点就把其入栈。当触碰到条件 <code>low[v]&gt;=dfn[u]</code> 就开始弹出栈直到栈顶元素为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span>，弹出的所有元素和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">u</span></span></span></span> 都属于一个点双中。</p>
+<p>点双有以下性质：</p>
+<ul>
+<li>
+<p>对于一个割点，其至少处于两个点双中。</p>
+</li>
+<li>
+<p>对于一个非割点，其至多处于两个点双中。</p>
+</li>
+</ul>
+<h2 id="p2-圆方树">P2 圆方树</h2>
+<p>现在正式开始介绍圆方树。</p>
+<p>圆方树是一个无向连通图的重构树，如果图不连通，圆方树则会变成森林。</p>
+<p>圆方树分为圆点和方点：</p>
+<ul>
+<li>
+<p>圆点代表着原图的一个点</p>
+</li>
+<li>
+<p>方点代表着原图的一个点双</p>
+</li>
+</ul>
+<p>以下是圆方树的建树过程：</p>
+<ol>
+<li>
+<p>找出每个点双，新建一个方点</p>
+</li>
+<li>
+<p>将方点向所有这个点双中每个点连一条边</p>
+</li>
+<li>
+<p>最后删除原图的所有边</p>
+</li>
+</ol>
+<p>下图展示了圆方树的建树过程：</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.luogu.com.cn/upload/image_hosting/lx70bh4v.png?x-oss-process=image/resize,m_lfit,h_500,w_505" alt="" loading="lazy"></figure>
+<p>图片源自 oi-wiki。</p>
+<p>构建圆方树的代码如下：</p>
+<pre><code>void tarjan(int u){
+	dfn[u]=low[u]=++tot;
+	st.push(u);
+	for(auto v:G[u]){
+		if(dfn[v]==-1){
+			tarjan(v);
+			low[u]=min(low[u],low[v]);
+			if(low[v]&gt;=dfn[u]){
+				++cnt;
+				G2[cnt].pb(u);
+				G2[u].pb(cnt);
+				while(st.size()){
+					int x=st.top();
+					st.pop();
+					G2[cnt].pb(x);
+					G2[x].pb(cnt);
+					if(x==v) break;
+				}
+			}
+		}else low[u]=min(low[u],dfn[v]);
+	}
+}
+</code></pre>
+<p>容易发现，圆方树具有以下性质：</p>
+<ul>
+<li>方点只会向圆点连边，圆点，只会向方点连边。</li>
+</ul>
+<p>证明：可以通过观察圆方树的建树过程得出。</p>
+<ul>
+<li>在图连通情况下，圆方“树”是一棵树。否则，圆方树是森林。</li>
+</ul>
+<p>证明：假设圆方“树”是不是一棵树，则必然出现环。一个环中至少出现两个方点，代表着原图中两个点双中点交集大小至少为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>。这样就不满足极大点双连通子图的条件了。矛盾。</p>
+<ul>
+<li>
+<p>圆方树的点数是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 级别的。</p>
+</li>
+<li>
+<p>对于两点间简单路径的并集，可以转化为圆方树上两点路径间的并集。</p>
+</li>
+</ul>
+<p>圆方树还具有更多性质，我们可以通过例题得出：</p>
+<h2 id="p3-例题">P3 例题</h2>
+<h3 id="apio2018铁人两项"><a href="https://loj.ac/p/2587">「APIO2018」铁人两项</a></h3>
+<p>题目就是要求任意两点简单路径并集的大小 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">2</span></span></span></span>。</p>
+<p>我们可以将圆方树的点赋予点权，将圆点点权设为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>，方点点权设为其对应点双的大小。</p>
+<p>这样有什么用呢？</p>
+<p>我们发现，对于两个点，答案就为圆方树上两点间路径的点权和。</p>
+<p>证明：</p>
+<ul>
+<li>
+<p>如果这两个点属于同一个点双，显然。</p>
+</li>
+<li>
+<p>对于这两个点在不同的点双，我们发现圆方树上两点路径间，除了起点和终点以外，其余所有圆点都为割点。我们发现这些点的会在其前后两个方点中<strong>各</strong>被计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 次，在这个点会被计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span> 次，总贡献为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。对于其他的会产生贡献的点，由于不是割点，它们至多在一个点双中，所以只会在其对应的方点被计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 次。</p>
+</li>
+</ul>
+<p>接下来就转换为求树上任意两点路径间的点权和。</p>
+<p>经典，改为考虑每个点被贡献的次数，树形dp即可。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+#define int long long
+#define pb push_back
+using namespace std;
+const int N=2e5+30;
+int n,m,u,v,dfn[N],low[N],val[N],ans,cnt,siz[N],tot,ans2;
+bool vis[N];
+vector&lt;int&gt; G[N],G2[N];
+stack&lt;int&gt; st;
+void tarjan(int u){
+	dfn[u]=low[u]=++tot;
+	st.push(u);
+	for(auto v:G[u]){
+		if(dfn[v]==-1){
+			tarjan(v);
+			low[u]=min(low[u],low[v]);
+			if(low[v]&gt;=dfn[u]){
+				++cnt;
+				int sum=1;
+				G2[cnt].pb(u);
+				G2[u].pb(cnt);//cout&lt;&lt;u&lt;&lt;&quot; &quot;&lt;&lt;cnt&lt;&lt;'\n';
+				while(st.size()){
+					int x=st.top();
+					st.pop();
+					sum++;
+					G2[cnt].pb(x);
+					G2[x].pb(cnt);
+					//cout&lt;&lt;x&lt;&lt;&quot; &quot;&lt;&lt;cnt&lt;&lt;'\n';
+					if(x==v) break;
+				}
+				val[cnt]=sum;
+			}
+		}else low[u]=min(low[u],dfn[v]);
+	}
+}
+void dfs(int u,int fa){
+	siz[u]=(u&lt;=n);
+	vis[u]=1;
+	for(auto v:G2[u]){
+		if(v==fa) continue;
+		dfs(v,u);
+		siz[u]+=siz[v];
+	}
+}
+void dfs2(int rt,int u,int fa){
+	int sum=0;
+	for(auto v:G2[u]){
+		if(v==fa) continue;
+		dfs2(rt,v,u);
+		// ans+=(siz[rt]-siz[v])*siz[v]*val[u];
+		sum+=(siz[rt]-siz[v]-(u&lt;=n))*siz[v];
+	}
+	// ans+=(siz[rt]-siz[u])*siz[u]*val[u];
+	sum+=(siz[rt]-siz[u])*(siz[u]-(u&lt;=n));
+	if(u&lt;=n) ans2+=(siz[rt]-1)*val[u];
+	// cout&lt;&lt;u&lt;&lt;' '&lt;&lt;sum&lt;&lt;'\n';
+	ans+=sum*val[u];
+}
+signed main(){
+	scanf(&quot;%lld%lld&quot;,&amp;n,&amp;m);
+	for(int i=1;i&lt;=m;i++){
+		scanf(&quot;%lld%lld&quot;,&amp;u,&amp;v);
+		G[u].pb(v);
+		G[v].pb(u);
+	}
+	cnt=n;
+	memset(dfn,-1,sizeof dfn);
+	for(int i=1;i&lt;=n;i++) val[i]=-1;
+	for(int i=1;i&lt;=n;i++)
+		if(dfn[i]==-1) tarjan(i);
+	for(int i=1;i&lt;=cnt;i++){//cout&lt;&lt;i&lt;&lt;&quot; &quot;&lt;&lt;val[i]&lt;&lt;'\n';
+		if(!vis[i]){
+			dfs(i,0);
+			dfs2(i,i,0);
+		}
+	}
+	printf(&quot;%lld&quot;,(ans/2+ans2)*2);
+}
+</code></pre>
+<h3 id="tourists"><a href="https://www.luogu.com.cn/problem/CF487E">Tourists</a></h3>
+<p>对于一个点双，我们可以任意一点出发，经过点双中权值最小的点，再从任意一点出去。这样走一定存在一条简单路径。所以一个点双的贡献可以设为点双内所有点权值的最小值。</p>
+<p>那我们可以建出圆方树，圆点权值不变，方点权值为其对应点双内所有点权值的最小值。</p>
+<p>现在询问操作转换为求树上间两点距离最小值。</p>
+<p>但是修改操作要修改与圆点相邻的所有方点，在极限数据（菊花图）的情况，圆点相邻的方点是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> 级别的，会TLE。</p>
+<p>我们在每个方点维护一个 multiset 记录其所有儿子的权值。每次修改圆点时就修改一下其父亲的 multiset，最后查询时如果 lca 是方点，注意要加上 lca 的父亲的权值。</p>
+<p>用树剖可以做到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><msup><mi>log</mi><mo>⁡</mo><mn>2</mn></msup><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\log^2 n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.148448em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8984479999999999em;"><span style="top:-3.1473400000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+#define pb push_back
+using namespace std;
+const int N=2e5+30,inf=2e9;
+int n,m,q,u,v,cnt,a[N];
+int fa[N],dep[N],son[N],siz[N],dfn[N],low[N],tot,rk[N],top[N],ed[N];
+char op;
+vector&lt;int&gt; G[N],G2[N];
+stack&lt;int&gt; st;
+multiset&lt;int&gt; s[N];
+void tarjan(int u){
+	dfn[u]=low[u]=++tot;
+	st.push(u);
+	for(auto v:G[u]){
+		if(dfn[v]==-1){
+			tarjan(v);
+			low[u]=min(low[u],low[v]);
+			if(low[v]&gt;=dfn[u]){
+				++cnt;
+				G2[cnt].pb(u);
+				G2[u].pb(cnt);//cout&lt;&lt;u&lt;&lt;' '&lt;&lt;cnt&lt;&lt;'\n';
+				while(st.size()){
+					int x=st.top();
+					st.pop();
+					G2[cnt].pb(x);//cout&lt;&lt;x&lt;&lt;&quot; &quot;&lt;&lt;cnt&lt;&lt;&quot;\n&quot;;
+					G2[x].pb(cnt);
+					if(x==v) break;
+				}
+			}
+		}else low[u]=min(low[u],dfn[v]);
+	}
+}
+void dfs(int u,int fat){
+	siz[u]=1;
+	for(auto v:G2[u]){
+		if(v==fat) continue;
+		dep[v]=dep[u]+1;
+		fa[v]=u;
+		dfs(v,u);
+		if(!son[u]||siz[v]&gt;=siz[son[u]])
+			son[u]=v;
+		siz[u]+=siz[v];
+	}
+}
+void dfs2(int u,int tp){
+	dfn[u]=++tot,rk[tot]=u;
+	top[u]=tp;
+	if(son[u]) dfs2(son[u],tp);
+	for(auto v:G2[u]){
+		if(v==fa[u]||v==son[u]) continue;
+		dfs2(v,v);
+	}
+	ed[u]=tot;
+}
+struct SegmentTree{
+	#define ls (i&lt;&lt;1)
+	#define rs (i&lt;&lt;1|1)
+	int mn[N*4];
+	void mg(int i){
+		mn[i]=min(mn[ls],mn[rs]);
+	}
+	void build(int i,int l,int r){
+		if(l==r){
+			mn[i]=a[rk[l]];
+			return;
+		}
+		int mid=(l+r)&gt;&gt;1;
+		build(ls,l,mid);
+		build(rs,mid+1,r);
+		mg(i);
+	}
+	inline int query(int i,int l,int r,int x,int y){
+		if(l&gt;=x&amp;&amp;r&lt;=y) return mn[i];//cout&lt;&lt;i&lt;&lt;' '&lt;&lt;l&lt;&lt;' '&lt;&lt;r&lt;&lt;' '&lt;&lt;x&lt;&lt;' '&lt;&lt;y&lt;&lt;'\n';
+		int res=inf,mid=(l+r)&gt;&gt;1;
+		if(mid&gt;=x) res=min(res,query(ls,l,mid,x,y));
+		if(mid+1&lt;=y) res=min(res,query(rs,mid+1,r,x,y));
+		return res;
+	}
+	inline void update(int i,int l,int r,int x,int val){//cout&lt;&lt;i&lt;&lt;&quot; &quot;&lt;&lt;l&lt;&lt;' '&lt;&lt;r&lt;&lt;&quot; &quot;&lt;&lt;x&lt;&lt;&quot; &quot;&lt;&lt;val&lt;&lt;'\n';
+		if(l==r){
+			mn[i]=val;
+			return;
+		}
+		int mid=(l+r)&gt;&gt;1;
+		if(x&lt;=mid) update(ls,l,mid,x,val);
+		else update(rs,mid+1,r,x,val);
+		mg(i);
+		return;
+	}
+	void upd(int u,int val){
+		update(1,1,cnt,dfn[u],val);
+	}
+	int query_path(int u,int v){
+		int res=inf;
+		while(top[u]!=top[v]){//cout&lt;&lt;u&lt;&lt;&quot; &quot;&lt;&lt;v&lt;&lt;'\n';
+			if(dep[top[u]]&gt;dep[top[v]]){
+				res=min(res,query(1,1,cnt,dfn[top[u]],dfn[u]));
+				u=fa[top[u]];
+			}else{
+				res=min(res,query(1,1,cnt,dfn[top[v]],dfn[v]));
+				v=fa[top[v]];
+			}
+		}
+		res=min(res,query(1,1,cnt,min(dfn[u],dfn[v]),max(dfn[u],dfn[v])));
+		if(dep[u]&gt;dep[v]) swap(u,v);
+		if(u&gt;n) res=min(res,a[fa[u]]);
+		return res;
+	}
+}T;
+signed main(){
+	scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;q);
+	cnt=n;
+	for(int i=1;i&lt;=n;i++)
+		scanf(&quot;%d&quot;,&amp;a[i]);
+	for(int i=1;i&lt;=m;i++){
+		scanf(&quot;%d%d&quot;,&amp;u,&amp;v);
+		G[u].pb(v);
+		G[v].pb(u);
+	}
+	memset(dfn,-1,sizeof dfn);
+	for(int i=1;i&lt;=n;i++)
+		if(dfn[i]==-1) tarjan(i);
+	tot=0;
+	dfs(1,0);
+	dfs2(1,1);
+	for(int i=1;i&lt;=n;i++)
+		if(fa[i]) s[fa[i]].insert(a[i]);
+	for(int i=n+1;i&lt;=cnt;i++)
+		a[i]=*s[i].begin();
+	T.build(1,1,cnt);
+	while(q--){
+		scanf(&quot; %c %d%d&quot;,&amp;op,&amp;u,&amp;v);
+		if(op=='C'){
+			T.upd(u,v);
+			if(fa[u]){
+				auto p=s[fa[u]].lower_bound(a[u]);
+				s[fa[u]].erase(*p);
+				s[fa[u]].insert(v);
+				if(a[fa[u]]!=*s[fa[u]].begin()){
+					a[fa[u]]=*s[fa[u]].begin();
+					T.upd(fa[u],a[fa[u]]);
+				}
+			}
+			a[u]=v;
+		}else
+			printf(&quot;%d\n&quot;,T.query_path(u,v));
+	}
+}
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#p1-%E7%82%B9%E5%8F%8C%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F">P1 点双连通分量</a></li>
+<li><a href="#p2-%E5%9C%86%E6%96%B9%E6%A0%91">P2 圆方树</a></li>
+<li><a href="#p3-%E4%BE%8B%E9%A2%98">P3 例题</a>
+<ul>
+<li><a href="#apio2018%E9%93%81%E4%BA%BA%E4%B8%A4%E9%A1%B9">「APIO2018」铁人两项</a></li>
+<li><a href="#tourists">Tourists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://lc535.github.io/post/boruvka-xue-xi-bi-ji/">
+              <h3 class="post-title">
+                Boruvka 学习笔记
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://lc535.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
