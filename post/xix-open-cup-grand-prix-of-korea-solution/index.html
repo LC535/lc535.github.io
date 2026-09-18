@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="Gridea Pro 1.2.2">
 <title>XIX Open Cup, Grand Prix of Korea Solution | LC_535&#39;s Blog feat Team Accept</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1789697963">
+<link rel="shortcut icon" href="/favicon.ico?v=1789698242">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="XIX Open Cup, Grand Prix of Korea Solution | LC_535&#39;s Blog feat Team Accept - Atom Feed" href="/atom.xml">
@@ -15,12 +15,12 @@
 
 
     <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="ICPC,dp,树剖,拓扑排序" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
 <meta name="description" content="G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...">
 <link rel="canonical" href="https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"XIX Open Cup, Grand Prix of Korea Solution","url":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","description":"G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...","datePublished":"2026-09-18T18:07:26+08:00","dateModified":"2026-09-18T10:08:30+08:00","author":{"@type":"Person","name":"LC_535's Blog feat Team Accept"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535's Blog feat Team Accept"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"XIX Open Cup, Grand Prix of Korea Solution","url":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","description":"G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...","datePublished":"2026-09-18T18:07:26+08:00","dateModified":"2026-09-18T10:23:34+08:00","author":{"@type":"Person","name":"LC_535's Blog feat Team Accept"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535's Blog feat Team Accept"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"LC_535's Blog feat Team Accept","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","name":"XIX Open Cup, Grand Prix of Korea Solution","position":2}]}</script>
 <meta property="og:title" content="XIX Open Cup, Grand Prix of Korea Solution">
 <meta property="og:description" content="G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...">
@@ -41,7 +41,7 @@
             
 <div class="site-header">
     <a href="/">
-        <img class="avatar" src="/images/avatar.png?v=1789697963" alt="">
+        <img class="avatar" src="/images/avatar.png?v=1789698242" alt="">
     </a>
     <h1 class="site-title">
         LC_535&#39;s Blog feat Team Accept
@@ -116,6 +116,22 @@
                             3 分钟阅读
                         </span>
                         
+                        <a href="/tag/icpc/" class="post-tag">
+                            # ICPC
+                        </a>
+                        
+                        <a href="/tag/dp/" class="post-tag">
+                            # dp
+                        </a>
+                        
+                        <a href="/tag/shu-pou/" class="post-tag">
+                            # 树剖
+                        </a>
+                        
+                        <a href="/tag/tuo-bu-pai-xu/" class="post-tag">
+                            # 拓扑排序
+                        </a>
+                        
                     </div>
                     
                     <div class="post-content-wrapper">
@@ -160,7 +176,7 @@ if(k+1&lt;=K){
 <p>然后就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>L</mi></msub><mo>→</mo><msub><mi>A</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">A_L\to A_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0077em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
 <p>对于每一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>，它的下一步权值就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>×</mo><msub><mi>h</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">(y_i+1)×h_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，个数也符合上述分段函数，把所有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 丢进堆维护即可。</p>
 <p>复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mclose">)</span></span></span></span></p>
-
+<!-- more -->
                         </div>
                         <div class="toc-container">
                             
