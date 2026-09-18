@@ -248,12 +248,12 @@
     <title>wqs二分学习笔记 | LC_535 &amp; Team Accept&#39;s Blog </title>
 
     
-<meta name="description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/up&amp;hellip;">
+<meta name="description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/uplo&amp;hellip;">
 <link rel="canonical" href="https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"wqs二分学习笔记","url":"https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/","description":"P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/up\u0026hellip;","datePublished":"2026-09-18T13:49:50Z","dateModified":"2026-09-18T13:49:50Z","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"wqs二分学习笔记","url":"https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/","description":"P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/uplo\u0026hellip;","datePublished":"2026-09-18T13:49:50+08:00","dateModified":"2026-09-18T13:49:50+08:00","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"LC_535 \u0026 Team Accept's Blog ","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/","name":"wqs二分学习笔记","position":2}]}</script>
 <meta property="og:title" content="wqs二分学习笔记">
-<meta property="og:description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/up&amp;hellip;">
+<meta property="og:description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/uplo&amp;hellip;">
 <meta property="og:url" content="https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LC_535 &amp; Team Accept's Blog ">
@@ -261,7 +261,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://lc535.github.io/post/wqser-fen-xue-xi-bi-ji/">
 <meta name="twitter:title" content="wqs二分学习笔记">
-<meta name="twitter:description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/up&amp;hellip;">
+<meta name="twitter:description" content="P1 前言 wqs二分，也是王钦石二分，是用于处理问题满足凸性的一种方法。 常见的标志有：恰好选 kkk 个物品，等。 此时便可大胆猜想 or 打标验证其满足凸性，然后上wqs二分 P2 算法原理 假设我们现在有个凸函数 f(x)f(x)f(x)（我们知道他是凸的，但不知道具体的函数长啥样） ![](https://cdn.luogu.com.cn/uplo&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.css" crossorigin="anonymous">
 </head>
