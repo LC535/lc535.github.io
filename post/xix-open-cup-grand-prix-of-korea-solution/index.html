@@ -5,11 +5,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="Gridea Pro 1.2.2">
-<title>XIX Open Cup, Grand Prix of Korea Solution | Gridea Pro</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1789697444">
+<title>XIX Open Cup, Grand Prix of Korea Solution | LC_535&#39;s Blog feat Team Accept</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1789697864">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="XIX Open Cup, Grand Prix of Korea Solution | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="XIX Open Cup, Grand Prix of Korea Solution | LC_535&#39;s Blog feat Team Accept - Atom Feed" href="/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
@@ -20,13 +20,13 @@
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
 <meta name="description" content="G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...">
 <link rel="canonical" href="https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"XIX Open Cup, Grand Prix of Korea Solution","url":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","description":"G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...","datePublished":"2026-09-18T18:07:26+08:00","dateModified":"2026-09-18T10:08:30+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","name":"XIX Open Cup, Grand Prix of Korea Solution","position":2}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"XIX Open Cup, Grand Prix of Korea Solution","url":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","description":"G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...","datePublished":"2026-09-18T18:07:26+08:00","dateModified":"2026-09-18T10:08:30+08:00","author":{"@type":"Person","name":"LC_535's Blog feat Team Accept"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535's Blog feat Team Accept"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"LC_535's Blog feat Team Accept","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/","name":"XIX Open Cup, Grand Prix of Korea Solution","position":2}]}</script>
 <meta property="og:title" content="XIX Open Cup, Grand Prix of Korea Solution">
 <meta property="og:description" content="G 交换两个数，可以等价于先消耗一个数，相当于把他存起来，再到有需要时候的时候取出来用。 所以可以设一个 fi,0/1/2,j,kf_{i,0/1/2,j,k}fi,0/1/2,j,k​ 表示考虑 1∼i1\sim i1∼i，000 表示未覆盖，111 表示被 i−1i-1i−1 覆盖，222 表示被 iii 覆盖，存了 jjj 次数且取了 kkk 次数的答案。 直接从上一步转移即可，转移如下。 f[i][2...">
 <meta property="og:url" content="https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:site_name" content="LC_535's Blog feat Team Accept">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://lc535.github.io/post/xix-open-cup-grand-prix-of-korea-solution/">
@@ -41,13 +41,13 @@
             
 <div class="site-header">
     <a href="/">
-        <img class="avatar" src="/images/avatar.png?v=1789697444" alt="">
+        <img class="avatar" src="/images/avatar.png?v=1789697864" alt="">
     </a>
     <h1 class="site-title">
-        Gridea Pro
+        LC_535&#39;s Blog feat Team Accept
     </h1>
     <p class="site-description">
-        Welcome to Gridea Pro
+        一直被超越，从未被模仿
     </p>
     <div class="menu-container">
         
