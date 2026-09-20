@@ -80,7 +80,7 @@
                 return 'light';
             };
 
-            const configDefault = 'dark';
+            const configDefault = 'light';
             const currentTheme = window.localStorage && window.localStorage.getItem('theme');
             const initialTheme = currentTheme || configDefault || getSystemTheme();
             const isDark = initialTheme === 'dark';
@@ -244,6 +244,25 @@
 
 
 
+<style>body {
+    background-image: url('https://files.seeusercontent.com/2026/09/20/Ro5v/pasted-image-1789875488055.webp');
+    background-size: cover;        /* 让图片铺满整个背景 */
+    background-attachment: fixed;  /* 背景图固定，滚动网页时不跟着动 */
+    background-position: center;   /* 图片居中显示 */
+    background-repeat: no-repeat;  /* 图片不重复 */
+}
+/* 将主要文字和链接颜色改为黑色 */
+body, p, h1, h2, h3, h4, h5, h6, span, a, div, .nav {
+    color: #333333 !important; /* #000000 是纯黑色，如果想要柔和一点可以改成 #333333 */
+}
+
+/* 针对导航栏和特定文字，取消它们的透明度和阴影，确保清晰可见 */
+a, .nav-link, .nav-item {
+    color: #000000 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}</style>
+
     <meta name="generator" content="Gridea Pro 1.2.2">
     <title>ICPC 网络赛 9.6 做题记录 | LC_535 &amp; Team Accept&#39;s Blog </title>
 
@@ -278,7 +297,7 @@
             return 'light';
         };
 
-        const configDefault = 'dark';
+        const configDefault = 'light';
         const savedTheme = localStorage.getItem('theme');
         const theme = savedTheme || configDefault || getSystemTheme();
 
