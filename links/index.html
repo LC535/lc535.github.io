@@ -241,23 +241,62 @@
 
 
 
-<style>body {
+<style>/* ==================== 1. 引入外部字体 ==================== */
+/* 引入 MiSans 字体 */
+@import url('https://cdn.jsdelivr.net/npm/misans-webfont/misans-style.css');
+/* 引入 JetBrains Mono 字体 */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* ==================== 2. 全局基础设置（背景 + 字体） ==================== */
+body {
+    /* 背景图设置 */
     background-image: url('https://files.seeusercontent.com/2026/09/20/Ro5v/pasted-image-1789875488055.webp');
     background-size: cover;        /* 让图片铺满整个背景 */
     background-attachment: fixed;  /* 背景图固定，滚动网页时不跟着动 */
     background-position: center;   /* 图片居中显示 */
     background-repeat: no-repeat;  /* 图片不重复 */
-}
-/* 将主要文字和链接颜色改为黑色 */
-body, p, h1, h2, h3, h4, h5, h6, span, a, div, .nav {
-    color: #333333 !important; /* #000000 是纯黑色，如果想要柔和一点可以改成 #333333 */
+    
+    /* 全局中文字体设置 */
+    font-family: 'MiSans', 'Microsoft YaHei', sans-serif !important;
 }
 
-/* 针对导航栏和特定文字，取消它们的透明度和阴影，确保清晰可见 */
+/* ==================== 3. 全局文字颜色设置 ==================== */
+/* 将主要文字和链接颜色改为深灰色 */
+body, p, h1, h2, h3, h4, h5, h6, span, div, .nav {
+    color: #333333 !important; 
+}
+
+/* 针对导航栏和特定链接，取消透明度和阴影，确保清晰可见 */
 a, .nav-link, .nav-item {
     color: #000000 !important;
     text-shadow: none !important;
     opacity: 1 !important;
+}
+
+/* ==================== 4. 代码块设置（深色背景 + 浅色文字 + 等宽字体） ==================== */
+pre, code, pre code, .highlight, .highlight pre, .highlight code, figure.highlight {
+    /* 颜色设置 */
+    background-color: #282c34 !important; /* 深灰背景 */
+    color: #abb2bf !important;            /* 浅灰白文字 */
+    
+    /* 代码英文字体设置 */
+    font-family: "JetBrains Mono", "Consolas", "Monaco", "Courier New", monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* 修复代码块内的行号等元素（确保行号颜色也清晰） */
+pre .line, code .line, .highlight .line {
+    color: #abb2bf !important;
+}
+
+/* ==================== 5. 行内代码样式 ==================== */
+/* 让段落中夹杂的 `小段代码` 也有清晰的浅色底色和醒目的文字 */
+:not(pre) > code {
+    background-color: #f0f0f0 !important;
+    color: #c7254e !important;
+    padding: 2px 4px;
+    border-radius: 4px;
 }</style>
 
 
