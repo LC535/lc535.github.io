@@ -306,12 +306,12 @@ pre .line, code .line, .highlight .line {
     <title>CCPC 2026 Changchun Site Sol | LC_535 &amp; Team Accept&#39;s Blog </title>
 
     
-<meta name="description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？ M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_{l+i}-a_{r-i}|&amp;hellip;">
+<meta name="description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？感觉罚时有点多，大概率ag。 M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_&amp;hellip;">
 <link rel="canonical" href="https://lc535.github.io/post/ccpc-2026-changchun-site-sol/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"CCPC 2026 Changchun Site Sol","url":"https://lc535.github.io/post/ccpc-2026-changchun-site-sol/","description":"虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？ M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\\forall i\\in[0,\\frac{r-l+1} 2],a_{l+i}\\equiv a_{r-i}\\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\\gcd_i(|a_{l+i}-a_{r-i}|\u0026hellip;","datePublished":"2026-10-22T14:13:30Z","dateModified":"2026-10-22T14:13:30Z","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"CCPC 2026 Changchun Site Sol","url":"https://lc535.github.io/post/ccpc-2026-changchun-site-sol/","description":"虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？感觉罚时有点多，大概率ag。 M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\\forall i\\in[0,\\frac{r-l+1} 2],a_{l+i}\\equiv a_{r-i}\\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\\gcd_i(|a_\u0026hellip;","datePublished":"2026-10-22T22:13:30+08:00","dateModified":"2026-10-22T14:16:47+08:00","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"LC_535 \u0026 Team Accept's Blog ","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/ccpc-2026-changchun-site-sol/","name":"CCPC 2026 Changchun Site Sol","position":2}]}</script>
 <meta property="og:title" content="CCPC 2026 Changchun Site Sol">
-<meta property="og:description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？ M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_{l+i}-a_{r-i}|&amp;hellip;">
+<meta property="og:description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？感觉罚时有点多，大概率ag。 M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_&amp;hellip;">
 <meta property="og:url" content="https://lc535.github.io/post/ccpc-2026-changchun-site-sol/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LC_535 &amp; Team Accept's Blog ">
@@ -319,7 +319,7 @@ pre .line, code .line, .highlight .line {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://lc535.github.io/post/ccpc-2026-changchun-site-sol/">
 <meta name="twitter:title" content="CCPC 2026 Changchun Site Sol">
-<meta name="twitter:description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？ M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_{l+i}-a_{r-i}|&amp;hellip;">
+<meta name="twitter:description" content="虽然感觉这题不咋地，但比起西安，简直就是白月光啊。 单人6题，但队友会第7题，并了说不定能金？感觉罚时有点多，大概率ag。 M 感觉M比后面的几题都难啊。 考虑一个 f(l,r,m)=1f(l,r,m)=1f(l,r,m)=1 的情况。 ∀i∈[0,r−l+12],al+i≡ar−imod m\forall i\in[0,\frac{r-l+1} 2],a_{l+i}\equiv a_{r-i}\mod m∀i∈[0,2r−l+1​],al+i​≡ar−i​modm 这等价于 $\gcd_i(|a_&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.css" crossorigin="anonymous">
 </head>
@@ -432,7 +432,7 @@ pre .line, code .line, .highlight .line {
             <div class="mod-post__entry wzulli">
                 
                 <p>虽然感觉这题不咋地，但比起西安，简直就是白月光啊。</p>
-<p>单人6题，但队友会第7题，并了说不定能金？</p>
+<p>单人6题，但队友会第7题，并了说不定能金？感觉罚时有点多，大概率ag。</p>
 <h3 id="m">M</h3>
 <p>感觉M比后面的几题都难啊。</p>
 <p>考虑一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo separator="true">,</mo><mi>m</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f(l,r,m)=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的情况。</p>
