@@ -306,12 +306,12 @@ pre .line, code .line, .highlight .line {
     <title>The 4th Universal Cup. Stage 8: Grand Prix of Poland | LC_535 &amp; Team Accept&#39;s Blog </title>
 
     
-<meta name="description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以，但过完该过的题，剩下也确实不会做了。C和F也确实是没想到，L没开到。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n) 的。 F 一直想网络流，剑走偏锋了。 正解是考虑一个边双，它的 siz≥2siz\ge 2siz≥2，内部的边权就一定 &amp;hellip;">
+<meta name="description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以。中期莫名其妙就想到了E的做法，过了。但过完该过的题，剩下也确实不会做了。F一直想那个网络流也没想出来啥，方向错了。C想到斐波那契了，但离完全背包还是很遥远，感觉像是一个trick，L没开到，不太应该。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n)&amp;hellip;">
 <link rel="canonical" href="https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The 4th Universal Cup. Stage 8: Grand Prix of Poland","url":"https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/","description":"感觉欧洲赛还是一如既往的困难。前期做得也还可以，但过完该过的题，剩下也确实不会做了。C和F也确实是没想到，L没开到。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n) 的。 F 一直想网络流，剑走偏锋了。 正解是考虑一个边双，它的 siz≥2siz\\ge 2siz≥2，内部的边权就一定 \u0026hellip;","datePublished":"2026-11-10T21:32:43+08:00","dateModified":"2026-11-10T14:01:43+08:00","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The 4th Universal Cup. Stage 8: Grand Prix of Poland","url":"https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/","description":"感觉欧洲赛还是一如既往的困难。前期做得也还可以。中期莫名其妙就想到了E的做法，过了。但过完该过的题，剩下也确实不会做了。F一直想那个网络流也没想出来啥，方向错了。C想到斐波那契了，但离完全背包还是很遥远，感觉像是一个trick，L没开到，不太应该。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n)\u0026hellip;","datePublished":"2026-11-10T21:32:43+08:00","dateModified":"2026-11-10T14:05:19+08:00","author":{"@type":"Person","name":"LC_535 \u0026 Team Accept's Blog "},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"LC_535 \u0026 Team Accept's Blog "}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://lc535.github.io","name":"LC_535 \u0026 Team Accept's Blog ","position":1},{"@type":"ListItem","item":"https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/","name":"The 4th Universal Cup. Stage 8: Grand Prix of Poland","position":2}]}</script>
 <meta property="og:title" content="The 4th Universal Cup. Stage 8: Grand Prix of Poland">
-<meta property="og:description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以，但过完该过的题，剩下也确实不会做了。C和F也确实是没想到，L没开到。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n) 的。 F 一直想网络流，剑走偏锋了。 正解是考虑一个边双，它的 siz≥2siz\ge 2siz≥2，内部的边权就一定 &amp;hellip;">
+<meta property="og:description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以。中期莫名其妙就想到了E的做法，过了。但过完该过的题，剩下也确实不会做了。F一直想那个网络流也没想出来啥，方向错了。C想到斐波那契了，但离完全背包还是很遥远，感觉像是一个trick，L没开到，不太应该。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n)&amp;hellip;">
 <meta property="og:url" content="https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LC_535 &amp; Team Accept's Blog ">
@@ -319,7 +319,7 @@ pre .line, code .line, .highlight .line {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://lc535.github.io/post/the-4th-universal-cup-stage-8-grand-prix-of-poland/">
 <meta name="twitter:title" content="The 4th Universal Cup. Stage 8: Grand Prix of Poland">
-<meta name="twitter:description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以，但过完该过的题，剩下也确实不会做了。C和F也确实是没想到，L没开到。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n) 的。 F 一直想网络流，剑走偏锋了。 正解是考虑一个边双，它的 siz≥2siz\ge 2siz≥2，内部的边权就一定 &amp;hellip;">
+<meta name="twitter:description" content="感觉欧洲赛还是一如既往的困难。前期做得也还可以。中期莫名其妙就想到了E的做法，过了。但过完该过的题，剩下也确实不会做了。F一直想那个网络流也没想出来啥，方向错了。C想到斐波那契了，但离完全背包还是很遥远，感觉像是一个trick，L没开到，不太应该。 E 把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 ≤25\le 25≤25，覆盖更新是可以做到 O(25n)O(25n)O(25n)&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.47/dist/katex.min.css" crossorigin="anonymous">
 </head>
@@ -431,7 +431,7 @@ pre .line, code .line, .highlight .line {
 
             <div class="mod-post__entry wzulli">
                 
-                <p>感觉欧洲赛还是一如既往的困难。前期做得也还可以，但过完该过的题，剩下也确实不会做了。C和F也确实是没想到，L没开到。</p>
+                <p>感觉欧洲赛还是一如既往的困难。前期做得也还可以。中期莫名其妙就想到了E的做法，过了。但过完该过的题，剩下也确实不会做了。F一直想那个网络流也没想出来啥，方向错了。C想到斐波那契了，但离完全背包还是很遥远，感觉像是一个trick，L没开到，不太应该。</p>
 <h3 id="e">E</h3>
 <p>把距离为1的两个密码连边，每次新加一个点就跑最短路，由于最短路的最大值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">\le 25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">25</span></span></span></span>，覆盖更新是可以做到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>25</mn><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(25n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord">25</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的。</p>
 <h3 id="f">F</h3>
